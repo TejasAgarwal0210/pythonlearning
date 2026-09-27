@@ -62,10 +62,10 @@ slno = 1
 
 while True:
     khana = input("Enter food choice from menu (q to quit ): ")
-    for item in menu:
-        if khana.lower() == item.lower():                                           
-            khana = item
-            break
+    for item in menu:                                                               #AI    #case of input and key didnt match sowanted a solution to match the case 
+        if khana.lower() == item.lower():                                           #AI    #thats why i used AI to fix this problem and added these 4 lines of code
+            khana = item                                                            #AI
+            break                                                                   #AI
     if khana.lower() == "q":
         print("THANK you for VISITING US")
         break
