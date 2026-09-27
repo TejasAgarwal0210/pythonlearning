@@ -54,5 +54,45 @@ print("----------MENU----------")
 for item, price in menu.items():
     print(f"{item:20} {price:.2f}₹")
 
+food = []
+price = []
+total = 0 
+ind = 0 
+slno = 1
+
+while True:
+    khana = input("Enter food choice from menu (q to quit ): ")
+    for item in menu:
+        if khana.lower() == item.lower():                                           
+            khana = item
+            break
+    if khana.lower() == "q":
+        print("THANK you for VISITING US")
+        break
+    elif khana not in list(menu):                                           
+        print("We Dont serve that food pls choose from MENU")
+    else:
+        food.append(khana)
+        pyce= menu[khana]
+        price.append(pyce)
+        total += pyce
+print()
+print("--------------YOUR CART--------------")
+print()
+print(f"Name = {name}")
+if choice == 1:
+    print("PHno = ", num)
+if choice == 2:
+    print("Email = ", email)
+print()
+
+for foods in food:
+    print(f"{slno}) {foods:20}{price[ind]:.2f}₹")
+    ind += 1 
+    slno +=1
         
-    
+print()
+print(f"YOUR TOTAL           = {total:.2f}₹")
+print()
+print("-----THANK YOU for VISITING US :)-----")
+
